@@ -1,0 +1,83 @@
+# 개인 프로필 페이지 문서
+
+## 1. 프로젝트 개요
+
+HTML, CSS, JavaScript만 사용한 반응형 개인 프로필 웹페이지입니다. 별도 설치나 빌드 없이 브라우저에서 실행할 수 있습니다.
+
+## 2. 파일 구조
+
+```text
+frontend/
+├── assets/
+│   └── images/
+│       └── profile.jpeg # 프로필 이미지
+├── index.html   # 페이지 콘텐츠와 구조
+├── about.html   # 소개 상세 페이지
+├── skills.html  # 기술 상세 페이지
+├── projects.html # 프로젝트 상세 페이지
+├── styles.css   # 레이아웃, 색상, 반응형 및 다크 모드
+└── script.js    # 모바일 메뉴, 테마, 필터, 애니메이션
+docs/
+└── README.md    # 프로젝트 문서
+```
+
+## 3. 페이지 구성
+
+- 헤더: 섹션 이동 메뉴, 모바일 메뉴, 라이트/다크 모드
+- 소개(Hero): 이름, 직무, 소개 문구, 소셜 링크
+- About: 자기소개, 경력, 위치, 관심사
+- Skills: 프론트엔드, UI/UX, 협업 역량
+- Projects: 프로젝트 카드 및 분야별 필터
+- Contact: 이메일 링크와 문의 폼
+
+## 4. 실행 방법
+
+가장 간단한 방법은 `frontend/index.html` 파일을 브라우저로 여는 것입니다.
+
+로컬 서버를 사용하려면 프로젝트 루트에서 아래 명령을 실행합니다.
+
+```powershell
+cd frontend
+python -m http.server 8000
+```
+
+그다음 브라우저에서 `http://localhost:8000`에 접속합니다.
+
+## 5. 콘텐츠 수정 방법
+
+`frontend/index.html`에서 다음 예시 정보를 실제 정보로 변경합니다.
+
+- 페이지 제목 및 프로필 이름
+- AI와 웹에 관한 자기소개 문구
+- 경력, 위치, 관심사
+- GitHub와 LinkedIn 주소
+- 프로젝트 이름, 설명, 연도, 링크
+- 이메일: `hello@example.com`
+
+프로필 이미지는 `frontend/assets/images/profile.jpeg`입니다. 다른 이미지로 교체할 때 같은 파일명을 사용하면 HTML을 수정하지 않아도 됩니다. 파일명이 다르면 `index.html`의 `portrait` 영역에 있는 이미지 경로도 함께 변경합니다.
+
+색상은 `frontend/styles.css` 상단의 CSS 변수에서 변경할 수 있습니다.
+
+```css
+:root {
+  --bg: #f4f1ea;
+  --text: #171815;
+  --accent: #ff5c35;
+}
+```
+
+## 6. 기능 및 주의사항
+
+- 선택한 테마는 브라우저의 `localStorage`에 저장됩니다.
+- 스크롤 시 콘텐츠가 나타나는 애니메이션이 적용됩니다.
+- 모바일 화면에서는 메뉴 버튼이 표시됩니다.
+- 연락처 폼은 현재 데모입니다. 실제 메시지를 받으려면 백엔드 API 또는 폼 서비스 연결이 필요합니다.
+- Google Fonts를 사용하므로 오프라인에서는 시스템 대체 글꼴로 표시됩니다.
+
+## 7. 향후 개선 항목
+
+- 실제 프로필 사진 및 이력서 다운로드 추가
+- 프로젝트 상세 페이지 연결
+- 연락처 폼을 `backend` API와 연결
+- Open Graph 이미지와 파비콘 추가
+- 배포 후 Lighthouse 접근성 및 성능 점검
