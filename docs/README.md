@@ -7,7 +7,7 @@ HTML, CSS, JavaScript만 사용한 반응형 개인 프로필 웹페이지입니
 ## 2. 파일 구조
 
 ```text
-frontend/
+./
 ├── assets/
 │   └── images/
 │       └── profile.jpeg # 프로필 이미지
@@ -32,12 +32,12 @@ docs/
 
 ## 4. 실행 방법
 
-가장 간단한 방법은 `frontend/index.html` 파일을 브라우저로 여는 것입니다.
+가장 간단한 방법은 `index.html` 파일을 브라우저로 여는 것입니다.
 
 로컬 서버를 사용하려면 프로젝트 루트에서 아래 명령을 실행합니다.
 
 ```powershell
-cd frontend
+# 프로젝트 루트에서 실행
 python -m http.server 8000
 ```
 
@@ -45,7 +45,7 @@ python -m http.server 8000
 
 ## 5. 콘텐츠 수정 방법
 
-`frontend/index.html`에서 다음 예시 정보를 실제 정보로 변경합니다.
+`index.html`에서 다음 예시 정보를 실제 정보로 변경합니다.
 
 - 페이지 제목 및 프로필 이름
 - AI와 웹에 관한 자기소개 문구
@@ -54,9 +54,9 @@ python -m http.server 8000
 - 프로젝트 이름, 설명, 연도, 링크
 - 이메일: `hello@example.com`
 
-프로필 이미지는 `frontend/assets/images/profile.jpeg`입니다. 다른 이미지로 교체할 때 같은 파일명을 사용하면 HTML을 수정하지 않아도 됩니다. 파일명이 다르면 `index.html`의 `portrait` 영역에 있는 이미지 경로도 함께 변경합니다.
+프로필 이미지는 `assets/images/profile.jpeg`입니다. 다른 이미지로 교체할 때 같은 파일명을 사용하면 HTML을 수정하지 않아도 됩니다. 파일명이 다르면 `index.html`의 `portrait` 영역에 있는 이미지 경로도 함께 변경합니다.
 
-색상은 `frontend/styles.css` 상단의 CSS 변수에서 변경할 수 있습니다.
+색상은 `styles.css` 상단의 CSS 변수에서 변경할 수 있습니다.
 
 ```css
 :root {
