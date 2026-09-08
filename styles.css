@@ -25,6 +25,8 @@ a { color: inherit; text-decoration: none; } button,input,textarea,select { font
 .hero-aside { padding-bottom:7px; }.hero-aside p { margin:0 0 24px; color:var(--muted); font-size:1rem; }
 .subscribe { display:flex; border-bottom:1px solid var(--ink); }.subscribe input { flex:1; min-width:0; padding:10px 0; border:0; outline:0; background:transparent; color:var(--ink); }.subscribe button { border:0; background:transparent; color:var(--ink); font-size:.82rem; font-weight:800; cursor:pointer; }
 .form-message { min-height:22px; margin:9px 0 0; color:var(--accent); font-size:.78rem; }
+.form-message.is-error { color:#b42318; }
+.submit-button:disabled { cursor:wait; opacity:.65; }
 .content-section { padding:76px 0 110px; }.section-head { display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-bottom:34px; }.section-head h2 { margin:0; font-size:clamp(1.8rem,4vw,3rem); letter-spacing:-.05em; }.section-head p { margin:0; color:var(--muted); font-size:.9rem; }
 .category-bar { display:flex; gap:8px; margin-bottom:34px; overflow-x:auto; scrollbar-width:none; }.category-bar::-webkit-scrollbar { display:none; }.category-bar button { flex:none; padding:8px 15px; border:1px solid var(--line); border-radius:999px; background:transparent; color:var(--muted); font-size:.78rem; cursor:pointer; }.category-bar button.active { border-color:var(--ink); background:var(--ink); color:var(--bg); }
 .featured-post { display:grid; grid-template-columns:1.12fr .88fr; min-height:440px; margin-bottom:64px; background:var(--paper); border:1px solid var(--line); }
